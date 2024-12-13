@@ -1,0 +1,269 @@
+/* Estilo del body para el fondo principal */
+body {
+    background-image: url('../imagenes/jpg/fondoprincipal.jpg'); /* Ruta a tu imagen de fondo principal */
+    background-size: cover; /* Hace que la imagen cubra todo el fondo */
+    background-position: center 100px; /* Mueve la imagen 100 píxeles hacia abajo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    margin: 0; /* Elimina el margen del body */
+    padding: 0px 0px 330px 0px; /* Agrega un padding superior de 50 píxeles */
+    border: 5px solid black; /* Añade un borde negro delgado alrededor del body */  
+    box-sizing: border-box; /* Asegura que el padding y el border no afecten el tamaño total */
+}
+
+/* Estilo para la barra de navegación */
+nav {
+    background-color: red; /* Color de fondo del nav */
+    background-image: url('../imagenes/jpg/yabarra.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el área */
+    background-position: center 650px; /* Mueve la imagen 650 píxeles hacia abajo */
+    height: 200px; /* Altura de la barra de navegación */
+    position: relative; /* Posiciona el nav en relación a su posición normal */
+    display: flex; /* Usa Flexbox para alinear los elementos hijos */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    border-bottom: 5px solid black; /* Añade un borde negro delgado en la parte inferior del nav */
+}
+
+/* Contenedor del logo, movido un poco más a la derecha */
+.logo-container {
+    position: absolute;
+    top: 20px; /* Ajusta la distancia desde el borde superior */
+    left: 250px; /* Mueve el logo más a la derecha */
+    z-index: 10; /* Asegura que el logo esté por encima del fondo */
+}
+
+/* Estilo del logo */
+.logo {
+    width: 150px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+/* Contenedor que agrupa los enlaces, ahora cuadrado con bordes redondeados */
+.nav-group {
+    background-color: hsla(0, 0%, 100%, 0.833); /* Cambia aquí al color que desees */
+    border-radius: 15px; /* Borde redondeado pero no completamente circular */
+    padding: 20px 40px; /* Más espaciado horizontalmente para hacer el recuadro más ancho */
+    display: inline-block; /* Hace que el contenedor ocupe solo el espacio necesario */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra sutil para dar profundidad */
+    position: absolute; /* Posiciona el contenedor de enlaces de forma absoluta */
+    bottom: 20px; /* Baja el recuadro respecto al nav */
+}
+
+/* Estilo de los enlaces dentro del nav */
+.nav-link {
+    color: black;
+    padding: 10px 20px;
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+
+
+/* Contenedor del texto "Paquetes más solicitados" */
+/* Estilo actualizado para el contenedor de "Paquetes más solicitados" */
+.header-paquetes {
+    background-color: hsla(0, 0%, 100%, 0.833); /* Fondo blanco con transparencia */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px 40px; /* Mismo padding que el recuadro de los enlaces */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra sutil para profundidad */
+    display: inline-block; /* Ajusta el tamaño del contenedor */
+    position: relative;
+    top: 150px; /* Ajusta la posición superior */
+    text-align: center; /* Centra el texto */
+    font-size: 28px; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+    z-index: 2; /* Asegura que esté por encima de otros elementos */
+    width: fit-content; /* Ajusta el ancho al contenido */
+    margin: 0 auto; /* Centra el recuadro horizontalmente */
+}
+
+.container {
+    margin-top: 80px;  /* Baja el contenido de las tarjetas 80px más */
+    display: flex;
+    justify-content: center;  /* Centra las tarjetas horizontalmente */
+    gap: 20px;  /* Añade espacio entre las tarjetas */
+}
+
+.card {
+    position: relative; /* Permite usar top, left, etc. para ajustar la posición */
+    top: 50px; /* Ajusta la posición vertical, puedes cambiar este valor */
+    left: 0px; /* Ajusta la posición horizontal si lo deseas */
+    width: 300px; /* Ajusta el ancho de las tarjetas si es necesario */
+    margin-bottom: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra alrededor de la tarjeta */
+    transition: transform 0.3s ease-in-out; /* Transición suave cuando se pasa el cursor */
+    background-color: rgba(0, 0, 255, 0.1); /* Fondo azul claro y transparente en toda la tarjeta */
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el contenido que se salga de la tarjeta */
+    height: 400px; /* Altura fija para todas las tarjetas */
+}
+
+
+/* Efecto hover en la tarjeta */
+.card:hover {
+    transform: translateY(-10px); /* Sube la tarjeta al pasar el cursor */
+}
+
+/* Imagen dentro de la tarjeta */
+.card-img-top {
+    width: 100%; /* Asegura que la imagen cubra todo el ancho de la tarjeta */
+    height: 50%; /* Ajusta la altura para que todas las imágenes tengan la misma proporción */
+    object-fit: cover; /* Mantiene la proporción de la imagen sin deformarse */
+    border-radius: 15px 15px 0 0; /* Redondea solo la parte superior de la imagen */
+    border: 3px solid black; /* Añadir un borde negro a las imágenes */
+    position: relative;
+    z-index: 3; /* Asegura que la imagen esté por encima de los recuadros de color */
+}
+
+/* Contenido de la tarjeta */
+.card-body {
+    position: relative;
+    z-index: 2; /* Asegura que el texto esté por encima de los recuadros */
+    color: white; /* Texto en color blanco */
+    padding: 20px;
+    height: 50%; /* Asegura que el texto ocupe el espacio restante de la tarjeta */
+}
+
+/* Contenido de la tarjeta (título, etc.) */
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: white !important; /* Cambia el color de los subtítulos de las tarjetas a blanco */
+
+}
+/* Cambia el color de los textos de descuento a blanco */
+.card .card-subtitle {
+    color: white !important; /* Asegura que el texto sea blanco */
+}
+
+.card-link {
+    color: white !important; /* Cambia el color del enlace "Ver más" a blanco */
+    font-weight: bold; /* Opcional: hace que el texto sea negrita */
+    text-decoration: underline; /* Añade un subrayado opcional */
+}
+.card-link:hover {
+    color: yellow; /* Cambia el color cuando pasas el ratón por encima (opcional) */
+}
+/* Descripción dentro de la tarjeta */
+.card-text {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Primer overlay: recuadro azul transparente detrás del contenido */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 128, 0.2); /* Azul oscuro transparente */
+    z-index: 1; /* Asegura que esté detrás del contenido y la imagen */
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+/* Segundo recuadro: azul más oscuro pero más pequeño */
+.card::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    background-color: rgba(0, 0, 255, 0.3); /* Azul más oscuro y transparente */
+    z-index: 1; /* Asegura que también esté debajo del contenido */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+
+/* Estilo del footer */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;  
+    width: 100%;
+    background-color: #D9D9D9;
+    color: black; /* Cambiamos el color del texto a negro */
+    height: 80px;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Cambiar el color del texto en el footer */
+footer .footer-text {
+    color: black; /* Este color se puede cambiar fácilmente */
+}
+/* Estilo para el contenedor general en la esquina superior derecha */
+.info-group {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: hsla(0, 0%, 100%, 0.833); /* Fondo del contenedor general */
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    position: absolute; /* Posicionamiento absoluto para colocar en la esquina */
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+}   
+
+/* Estilo para la información de ventas */
+.sales-info {
+    background-color: red;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    margin-right: 20px;
+    width: 180px; /* Ajusta el ancho del recuadro */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sales-info p {
+    margin: 0;
+}
+
+.sales-number {
+    font-size: 16px;
+    margin-top: 5px; /* Espacio entre el texto y el número */
+}
+
+/* Estilo para el contenedor de enlaces */
+.link-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilo de los enlaces */
+.info-link {
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    width: 120px; /* Ajusta el ancho del enlace */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.info-link:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Cambia ligeramente el fondo al hacer hover */
+}
